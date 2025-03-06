@@ -151,8 +151,8 @@ export function CTA() {
                     <span className="text-lg text-gray-500 line-through">{t('cta.pricing.regular.value')}</span>
                   </div>
                   <div className="flex justify-between items-center mt-2">
-                    <span className="font-medium">{t('cta.pricing.promotional.label')}</span>
-                    <span className="text-2xl font-bold text-dark-pastel-green">{t('cta.pricing.promotional.value')}  <span className='font-regular text-xs text-[gray]'>{t('cta.pricing.promotional.iva')}</span> </span>
+                    <span className="font-medium text-xs md:text-lg">{t('cta.pricing.promotional.label')}</span>
+                    <span className="text-lg md:text-2xl font-bold text-dark-pastel-green">{t('cta.pricing.promotional.value')}  <span className='font-regular text-[9px] text-[gray]'>{t('cta.pricing.promotional.iva')}</span> </span>
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
                     {t('cta.pricing.promotional.installments')}
