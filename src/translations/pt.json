@@ -180,8 +180,8 @@
   "cta": {
     "title": "📢 As inscrições estão abertas!",
     "lines": [
-      "💡 Comece sua jornada na programação com aulas ao vivo e prática intensa!",
-      "📅 Início em Final de Abril de 2025 - Reserve sua vaga agora!"
+      "Comece sua jornada na programação com aulas ao vivo e prática intensa!",
+      "📅 Início em 15 de Abril de 2025"
     ],
     "button": "Quero me inscrever agora",
     "reserve": "Reserve sua vaga agora",
@@ -254,7 +254,7 @@
     "contact": {
       "title": "Contato",
       "address": "Porto, Portugal",
-      "phone": "+351 913873938",
+      "phone": "+351913873938",
       "whatsapp": "Whatsapp disponível",
       "email": "hello@codeyourway.eu"
     },
