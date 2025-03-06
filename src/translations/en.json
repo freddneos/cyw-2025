@@ -1,0 +1,137 @@
+{
+  "title": "🚀 CodeYourWay Ignite Express - Module 1",
+  "hero": {
+    "title": "Fast-track your way into programming",
+    "subtitle": "Learn to code in 4 weeks with live classes and intensive practice"
+  },
+  "about": {
+    "title": "📌 About the Bootcamp",
+    "description": "CodeYourWay Ignite Express is an intensive live course for those who want to enter the programming world in an accelerated way. Our focus is on practical skills, with dynamic classes and real exercises from day one."
+  },
+  "schedule": {
+    "title": "📅 Schedule",
+    "warmup": {
+      "title": "📌 Warm-up (April 2025):",
+      "items": [
+        "Introductory recorded classes",
+        "Access to exclusive community",
+        "Study materials for familiarization"
+      ]
+    },
+    "classes": {
+      "title": "📌 Start of Live Classes (May 2025):",
+      "items": [
+        "Classes 2x per week (3h each)",
+        "Practical projects in each module",
+        "Live mentoring sessions",
+        "Extra review classes"
+      ]
+    }
+  },
+  "structure": {
+    "title": "🏆 Module 1 Structure",
+    "name": "CodeYourWay Ignite Foundations",
+    "hours": {
+      "title": "📌 Total Workload: 34 hours",
+      "items": [
+        "✅ Live classes: 2x per week (3h each) → 24 hours",
+        "✅ Extra live classes: Mentoring and review → 10 hours",
+        "✅ Recorded classes: Complement the practical content"
+      ]
+    }
+  },
+  "objective": {
+    "title": "🎯 Module 1 Objective",
+    "description": "The objective of this module is to teach the basics of web programming, with JavaScript from day one, as well as HTML and CSS as support to develop complete projects."
+  },
+  "strategy": {
+    "title": "🔥 Learning Strategy",
+    "items": [
+      "✅ Focus on logic and JavaScript from the first class",
+      "✅ HTML and CSS as support for learning JS (not the other way around)",
+      "✅ Practical use of Git and GitHub Pages for early deployment",
+      "✅ Mini practical projects for each major concept learned"
+    ]
+  },
+  "topics": {
+    "title": "🏗 Module 1 Topics",
+    "weeks": [
+      {
+        "title": "Week 1: Web Fundamentals and Introduction to JavaScript",
+        "items": [
+          "📌 How does the web work?",
+          "📌 Introduction to HTML, CSS and GitHub Pages",
+          "📌 Environment setup (VS Code, Node.js, Git)",
+          "📌 Creating a first static site and publishing on GitHub Pages",
+          "📌 Introduction to JavaScript: Variables, Data Types and Operators"
+        ]
+      },
+      {
+        "title": "Week 2: Essential JavaScript and DOM Manipulation",
+        "items": [
+          "📌 Control structures: if, else, switch",
+          "📌 Loops: for, while, do while",
+          "📌 Functions and scope",
+          "📌 DOM manipulation: querySelector, events and interactions",
+          "📌 Creating an interactive To-Do List"
+        ]
+      },
+      {
+        "title": "Week 3: Advanced JavaScript and Data Storage",
+        "items": [
+          "📌 Arrays and objects in JavaScript",
+          "📌 Methods map(), filter(), reduce()",
+          "📌 JSON and LocalStorage",
+          "📌 Creating a Persistent Task Manager"
+        ]
+      },
+      {
+        "title": "Week 4: APIs, Advanced Git and Project Publishing",
+        "items": [
+          "📌 Working with public APIs using fetch()",
+          "📌 Creating a Weather App with external API",
+          "📌 Code versioning and branches on GitHub",
+          "📌 Creating a basic portfolio to publish the projects made in the course"
+        ]
+      }
+    ]
+  },
+  "mentors": {
+    "title": "🎙 Mentors",
+    "list": [
+      {
+        "name": "Fredd Bezerra",
+        "role": "CTO, full-stack developer and instructor with international experience"
+      },
+      {
+        "name": "Yago Valuche",
+        "role": "Full-stack developer and technology teaching specialist"
+      }
+    ]
+  },
+  "style": {
+    "title": "📌 Tone and Style",
+    "items": [
+      "✅ Straight to the point, clear and objective",
+      "✅ Focus on accelerated learning and practice",
+      "✅ Not talking about 'career', but about skills and entering the world of technology",
+      "✅ Emphasis on live classes and intense practice",
+      "✅ Motivational, showing that anyone can learn programming quickly"
+    ]
+  },
+  "cta": {
+    "title": "🔥 Call to Action",
+    "lines": [
+      "📢 Enrollments for CodeYourWay Ignite Foundations are open!",
+      "💡 Start your journey in programming with live classes and intense practice!",
+      "📅 Start in April 2025 - Reserve your spot now!"
+    ],
+    "button": "I want to enroll now"
+  },
+  "waitlist": {
+    "title": "Join the waiting list",
+    "email": "Your email",
+    "button": "Submit",
+    "message": "The bootcamp is not yet available in English but will be translated soon. Join our waiting list to be notified."
+  }
+}

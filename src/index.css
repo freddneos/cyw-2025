@@ -1,8 +1,49 @@
-@import '@fontsource/urbanist/index.css';
+@import '@fontsource/urbanist/100.css';
+@import '@fontsource/urbanist/200.css';
+@import '@fontsource/urbanist/300.css';
 @import '@fontsource/urbanist/400.css';
 @import '@fontsource/urbanist/500.css';
+@import '@fontsource/urbanist/600.css';
 @import '@fontsource/urbanist/700.css';
+@import '@fontsource/urbanist/800.css';
+@import '@fontsource/urbanist/900.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Ajuste para o tamanho do navbar fixo */
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos para os links de âncora */
+a:focus-visible {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Animações personalizadas */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+/* Remove outline para usuários utilizando mouse, mas mantém para navegação por teclado */
+:focus:not(:focus-visible) {
+  outline: none;
+}

@@ -1,5 +1,6 @@
 import { render } from 'preact'
+import { App } from './app'
 import './index.css'
-import { App } from './app.jsx'
 
+// Inicializa a tradução e renderiza o aplicativo
 render(<App />, document.getElementById('app'))
