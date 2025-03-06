@@ -40,8 +40,8 @@ export function LanguageSwitcher() {
           aria-label="Português"
         >
           <img 
-            src="https://flagcdn.com/br.svg" 
-            alt="Bandeira do Brasil" 
+            src="https://flagcdn.com/pt.svg" 
+            alt="Bandeira de Portugal" 
             className="w-full h-full object-cover"
           />
         </button>
