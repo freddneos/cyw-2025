@@ -44,27 +44,31 @@ export function CTA() {
               {/* Left column: Form */}
               <div className="p-8 md:p-12">
                 <div className="inline-flex items-center px-4 py-2 bg-dark-pastel-green/10 rounded-full text-dark-pastel-green font-medium text-sm mb-6">
-                  <FaRocket className="mr-2" /> Reserve sua vaga agora
+                  <FaRocket className="mr-2" /> {t('cta.reserve')}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900">Inscreva-se no CodeYourWay Ignite</h3>
-                <p className="mt-3 text-gray-600">Preencha o formulário abaixo para garantir sua vaga no próximo bootcamp.</p>
+                <h3 className="text-2xl font-bold text-gray-900">{t('cta.form.title')}</h3>
+                <p className="mt-3 text-gray-600">{t('cta.form.subtitle')}</p>
                 
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Nome completo</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                        {t('cta.form.name.label')}
+                      </label>
                       <input
                         type="text"
                         id="name"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-dark-pastel-green focus:border-dark-pastel-green"
-                        placeholder="Digite seu nome"
+                        placeholder={t('cta.form.name.placeholder')}
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                        {t('cta.form.email.label')}
+                      </label>
                       <input
                         type="email"
                         id="email"
@@ -72,18 +76,20 @@ export function CTA() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-dark-pastel-green focus:border-dark-pastel-green"
-                        placeholder="Digite seu e-mail"
+                        placeholder={t('cta.form.email.placeholder')}
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                        {t('cta.form.phone.label')}
+                      </label>
                       <input
                         type="tel"
                         id="phone"
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-dark-pastel-green focus:border-dark-pastel-green"
-                        placeholder="(00) 00000-0000"
+                        placeholder={t('cta.form.phone.placeholder')}
                       />
                     </div>
                     
@@ -105,15 +111,13 @@ export function CTA() {
                     <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
                       <FaCheck className="h-6 w-6 text-green-600" />
                     </div>
-                    <h4 className="text-lg font-medium text-gray-900">Inscrição recebida!</h4>
-                    <p className="mt-2 text-gray-600">
-                      Entraremos em contato em breve com mais informações sobre o bootcamp.
-                    </p>
+                    <h4 className="text-lg font-medium text-gray-900">{t('cta.success.title')}</h4>
+                    <p className="mt-2 text-gray-600">{t('cta.success.message')}</p>
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className="mt-4 text-dark-pastel-green hover:underline"
                     >
-                      Voltar para o formulário
+                      {t('cta.success.backButton')}
                     </button>
                   </motion.div>
                 )}
@@ -121,18 +125,10 @@ export function CTA() {
               
               {/* Right column: Benefits */}
               <div className="bg-gray-50 p-8 md:p-12">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">O que está incluído:</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-6">{t('cta.benefits.title')}</h3>
                 
                 <ul className="space-y-4">
-                  {[
-                    "Acesso a todas as aulas ao vivo",
-                    "Materiais complementares em texto e vídeo",
-                    "Projetos práticos para seu portfólio",
-                    "Comunidade exclusiva para networking",
-                    "Sessões de mentoria individual",
-                    "Certificado de conclusão",
-                    "Suporte por 30 dias após o término do bootcamp"
-                  ].map((benefit, idx) => (
+                  {t('cta.benefits.items', { returnObjects: true }).map((benefit, idx) => (
                     <li key={idx} className="flex">
                       <div className="flex-shrink-0 h-5 w-5 text-dark-pastel-green mt-1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -146,15 +142,15 @@ export function CTA() {
                 
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">Preço normal</span>
-                    <span className="text-lg text-gray-500 line-through">R$ 1.997,00</span>
+                    <span className="text-sm text-gray-500">{t('cta.pricing.regular.label')}</span>
+                    <span className="text-lg text-gray-500 line-through">{t('cta.pricing.regular.value')}</span>
                   </div>
                   <div className="flex justify-between items-center mt-2">
-                    <span className="font-medium">Preço promocional</span>
-                    <span className="text-2xl font-bold text-dark-pastel-green">R$ 997,00</span>
+                    <span className="font-medium">{t('cta.pricing.promotional.label')}</span>
+                    <span className="text-2xl font-bold text-dark-pastel-green">{t('cta.pricing.promotional.value')}</span>
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
-                    ou 12x de R$ 97,00 sem juros
+                    {t('cta.pricing.promotional.installments')}
                   </div>
                   
                   <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-md p-4">
@@ -165,9 +161,9 @@ export function CTA() {
                         </svg>
                       </div>
                       <div className="ml-3">
-                        <h4 className="text-sm font-medium text-yellow-800">Vagas limitadas!</h4>
+                        <h4 className="text-sm font-medium text-yellow-800">{t('cta.vacancies.title')}</h4>
                         <p className="text-sm text-yellow-700 mt-1">
-                          Temos apenas 30 vagas disponíveis para esta turma.
+                          {t('cta.vacancies.message')}
                         </p>
                       </div>
                     </div>

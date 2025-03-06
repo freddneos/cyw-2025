@@ -98,14 +98,25 @@
   },
   "mentors": {
     "title": "🎙 Mentors",
+    "subtitle": "Learn from experienced professionals working in the market",
     "list": [
       {
         "name": "Fredd Bezerra",
-        "role": "CTO, full-stack developer and instructor with international experience"
+        "role": "CTO, full-stack developer and instructor with international experience",
+        "achievements": [
+          "Over 10 years of development experience",
+          "JavaScript and web technologies specialist",
+          "Has trained over 500 students"
+        ]
       },
       {
         "name": "Yago Valuche",
-        "role": "Full-stack developer and technology teaching specialist"
+        "role": "Full-stack developer and technology teaching specialist",
+        "achievements": [
+          "Full-stack developer for 8 years",
+          "Expert in teaching and agile methodologies",
+          "Author of several online programming courses"
+        ]
       }
     ]
   },
@@ -126,7 +137,56 @@
       "💡 Start your journey in programming with live classes and intense practice!",
       "📅 Start in April 2025 - Reserve your spot now!"
     ],
-    "button": "I want to enroll now"
+    "button": "I want to enroll now",
+    "reserve": "Reserve your spot now",
+    "form": {
+      "title": "Sign up for CodeYourWay Ignite",
+      "subtitle": "Fill out the form below to secure your spot in the next bootcamp.",
+      "name": {
+        "label": "Full name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "(00) 00000-0000"
+      }
+    },
+    "success": {
+      "title": "Registration received!",
+      "message": "We'll be in touch soon with more information about the bootcamp.",
+      "backButton": "Back to form"
+    },
+    "benefits": {
+      "title": "What's included:",
+      "items": [
+        "Access to all live classes",
+        "Complementary text and video materials",
+        "Practical projects for your portfolio",
+        "Exclusive networking community",
+        "Individual mentoring sessions",
+        "Completion certificate",
+        "30-day support after bootcamp completion"
+      ]
+    },
+    "pricing": {
+      "regular": {
+        "label": "Regular price",
+        "value": "€ 450,00"
+      },
+      "promotional": {
+        "label": "Promotional price",
+        "value": "€ 300,00",
+        "installments": "ou 3x de € 100,00 com Klarna"
+      }
+    },
+    "vacancies": {
+      "title": "Limited spots!",
+      "message": "We only have 30 spots available for this class."
+    }
   },
   "waitlist": {
     "title": "Join the waiting list",

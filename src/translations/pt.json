@@ -98,14 +98,25 @@
   },
   "mentors": {
     "title": "🎙 Mentores",
+    "subtitle": "Aprenda com profissionais experientes que atuam no mercado",
     "list": [
       {
         "name": "Fredd Bezerra",
-        "role": "CTO, desenvolvedor full-stack e instrutor com experiência internacional"
+        "role": "CTO, desenvolvedor full-stack e instrutor com experiência internacional",
+        "achievements": [
+          "Mais de 10 anos de experiência em desenvolvimento",
+          "Especialista em JavaScript e tecnologias web",
+          "Já treinou mais de 500 estudantes"
+        ]
       },
       {
         "name": "Yago Valuche",
-        "role": "Desenvolvedor full-stack e especialista em ensino de tecnologia"
+        "role": "Desenvolvedor full-stack e especialista em ensino de tecnologia",
+        "achievements": [
+          "Desenvolvedor full-stack há 8 anos",
+          "Especialista em ensino e metodologias ágeis",
+          "Autor de diversos cursos online de programação"
+        ]
       }
     ]
   },
@@ -126,7 +137,56 @@
       "💡 Comece sua jornada na programação com aulas ao vivo e prática intensa!",
       "📅 Início em Abril de 2025 - Reserve sua vaga agora!"
     ],
-    "button": "Quero me inscrever agora"
+    "button": "Quero me inscrever agora",
+    "reserve": "Reserve sua vaga agora",
+    "form": {
+      "title": "Inscreva-se no CodeYourWay Ignite",
+      "subtitle": "Preencha o formulário abaixo para garantir sua vaga no próximo bootcamp.",
+      "name": {
+        "label": "Nome completo",
+        "placeholder": "Digite seu nome"
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Digite seu e-mail"
+      },
+      "phone": {
+        "label": "Telefone",
+        "placeholder": "(00) 00000-0000"
+      }
+    },
+    "success": {
+      "title": "Inscrição recebida!",
+      "message": "Entraremos em contato em breve com mais informações sobre o bootcamp.",
+      "backButton": "Voltar para o formulário"
+    },
+    "benefits": {
+      "title": "O que está incluído:",
+      "items": [
+        "Acesso a todas as aulas ao vivo",
+        "Materiais complementares em texto e vídeo",
+        "Projetos práticos para seu portfólio",
+        "Comunidade exclusiva para networking",
+        "Sessões de mentoria individual",
+        "Certificado de conclusão",
+        "Suporte por 30 dias após o término do bootcamp"
+      ]
+    },
+    "pricing": {
+      "regular": {
+        "label": "Preço normal",
+        "value": "€ 450,00"
+      },
+      "promotional": {
+        "label": "Preço promocional",
+        "value": "€ 300,00",
+        "installments": "ou 3x de € 100,00 com Klarna"
+      }
+    },
+    "vacancies": {
+      "title": "Vagas limitadas!",
+      "message": "Temos apenas 30 vagas disponíveis para esta turma."
+    }
   },
   "waitlist": {
     "title": "Entrar na lista de espera",

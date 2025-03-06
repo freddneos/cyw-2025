@@ -12,7 +12,7 @@ export function Mentors() {
             {t('mentors.title')}
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
-            Aprenda com profissionais experientes que atuam no mercado
+            {t('mentors.subtitle')}
           </p>
         </div>
 
@@ -45,37 +45,12 @@ export function Mentors() {
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <ul className="space-y-2">
-                    {idx === 0 ? (
-                      <>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Mais de 10 anos de experiência em desenvolvimento</span>
-                        </li>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Especialista em JavaScript e tecnologias web</span>
-                        </li>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Já treinou mais de 500 estudantes</span>
-                        </li>
-                      </>
-                    ) : (
-                      <>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Desenvolvedor full-stack há 8 anos</span>
-                        </li>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Especialista em ensino e metodologias ágeis</span>
-                        </li>
-                        <li className="flex items-center">
-                          <span className="mr-2 text-dark-pastel-green">✓</span>
-                          <span className="text-gray-600">Autor de diversos cursos online de programação</span>
-                        </li>
-                      </>
-                    )}
+                    {mentor.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-center">
+                        <span className="mr-2 text-dark-pastel-green">✓</span>
+                        <span className="text-gray-600">{achievement}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
