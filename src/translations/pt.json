@@ -2,7 +2,7 @@
   "title": "🚀 CodeYourWay Ignite Express",
   "hero": {
     "title": "Acelere sua entrada no mundo da programação",
-    "subtitle": "Aprenda os fundamentos da programação web em 6 semanas com aulas ao vivo e práticas intensas",
+    "subtitle": "Aprenda os fundamentos da programação web em 6 semanas com aulas online ao vivo e com práticas intensas",
     "stats": {
       "weeks": {
         "value": "6",
@@ -160,6 +160,8 @@
       {
         "name": "Frederico Bezerra",
         "role": "Fundador do CodeYourWay  e instrutor com experiência internacional",
+        "linkedin": "https://linkedin.com/in/fredericobezerra",
+        "github": "https://github.com/freddneos",
         "achievements": [
           "Mais de 14 anos de experiência em Startups e Empresas de Tecnologia",
           "Especialista em Desenvolvimento Fullstack e Inteligência Artificial",
@@ -169,6 +171,8 @@
       {
         "name": "Yago Valuche",
         "role": "Desenvolvedor full-stack e especialista em ensino de tecnologia",
+        "linkedin": "https://www.linkedin.com/in/yago-valuche-95b7591ab/",
+        "github": "https://github.com/yagovaluchedevs",
         "achievements": [
           "Desenvolvedor full-stack há 8 anos",
           "Especialista em ensino e metodologias ágeis",
@@ -210,13 +214,15 @@
       "title": "O que está incluído:",
       "items": [
         "Acesso a todas as aulas ao vivo",
+        "Acesso as aulas gravadas por 12 meses",
         "Materiais complementares em texto e vídeo",
         "Projetos práticos para seu portfólio",
         "Comunidade exclusiva para networking",
-        "Sessões de mentoria individual",
         "Certificado de conclusão",
-        "Suporte por 30 dias após o término do bootcamp",
-        "Imersão especial em IA para acelerar seu aprendizado em até 10x"
+        "Bônus Sessões de mentoria individual",
+        "Bônus Suporte por 60 dias após o término do bootcamp",
+        "Bônus Imersão especial em IA para acelerar seu aprendizado em até 10x",
+        "Bônus 25% OFF nos Bootcamps Mobile com React Native e Frontend com React"
       ]
     },
     "pricing": {
@@ -227,12 +233,13 @@
       "promotional": {
         "label": "Preço promocional",
         "value": "€ 300,00",
+        "iva": "+ IVA (se aplicável)",
         "installments": "ou 3x de € 100,00 com Klarna"
       }
     },
     "vacancies": {
       "title": "Vagas limitadas!",
-      "message": "Temos apenas 30 vagas disponíveis para esta turma."
+      "message": "Por ser online e ao vivo, temos um numero limitado de vagas."
     }
   },
   "waitlist": {

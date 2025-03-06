@@ -1,27 +1,35 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { useTranslation } from './i18n';
 import { motion } from 'framer-motion';
+import { useFormSubmission } from '../hooks/useFormSubmission';
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const [showWaitlist, setShowWaitlist] = useState(false);
-  const [email, setEmail] = useState('');
+
+  const {
+        email,
+        setEmail,
+        isSubmitted,
+        handleSubmit,
+      } = useFormSubmission(false);
 
   const changeLanguage = (lng) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     if (lng === 'en' && i18n.language !== 'en') {
       setShowWaitlist(true);
     }
     i18n.changeLanguage(lng);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setShowWaitlist(false);
-    setEmail('');
-    alert(i18n.t('waitlist.success'));
-  };
-
   const currentLanguage = i18n.language || 'pt';
+
+  useEffect(() => {
+    if (isSubmitted) {
+      setShowWaitlist(false);
+    }
+  }
+  , [isSubmitted]);
 
   return (
     <div className="relative">

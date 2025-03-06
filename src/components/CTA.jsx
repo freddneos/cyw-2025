@@ -1,21 +1,20 @@
-import { useState } from 'preact/hooks';
+import { useFormSubmission } from '../hooks/useFormSubmission';
 import { useTranslation } from './i18n';
 import { motion } from 'framer-motion';
 import { FaRocket, FaCheck } from 'react-icons/fa';
 
 export function CTA() {
   const { t } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setEmail('');
-    }, 500);
-  };
+  const {
+    email,
+    setEmail,
+    name,
+    setName,
+    phone,
+    setPhone,
+    isSubmitted,
+    handleSubmit,
+  } = useFormSubmission();
   
   return (
     <section id="inscricao" className="relative py-16 md:py-24 bg-gradient-to-b from-dark-pastel-green/5 to-dark-pastel-green/20 overflow-hidden">
@@ -60,6 +59,8 @@ export function CTA() {
                         type="text"
                         id="name"
                         required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-dark-pastel-green focus:border-dark-pastel-green"
                         placeholder={t('cta.form.name.placeholder')}
                       />
@@ -88,6 +89,8 @@ export function CTA() {
                         type="tel"
                         id="phone"
                         required
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-dark-pastel-green focus:border-dark-pastel-green"
                         placeholder={t('cta.form.phone.placeholder')}
                       />
@@ -131,9 +134,11 @@ export function CTA() {
                   {t('cta.benefits.items', { returnObjects: true }).map((benefit, idx) => (
                     <li key={idx} className="flex">
                       <div className="flex-shrink-0 h-5 w-5 text-dark-pastel-green mt-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
+                        {benefit.includes('Bônus') ? (
+                         <>⭐️</>
+                        ) :  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>}
                       </div>
                       <span className="ml-3 text-gray-600">{benefit}</span>
                     </li>
@@ -147,7 +152,7 @@ export function CTA() {
                   </div>
                   <div className="flex justify-between items-center mt-2">
                     <span className="font-medium">{t('cta.pricing.promotional.label')}</span>
-                    <span className="text-2xl font-bold text-dark-pastel-green">{t('cta.pricing.promotional.value')}</span>
+                    <span className="text-2xl font-bold text-dark-pastel-green">{t('cta.pricing.promotional.value')}  <span className='font-regular text-xs text-[gray]'>{t('cta.pricing.promotional.iva')}</span> </span>
                   </div>
                   <div className="mt-2 text-sm text-gray-500">
                     {t('cta.pricing.promotional.installments')}

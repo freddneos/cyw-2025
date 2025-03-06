@@ -1,9 +1,12 @@
 import { useTranslation } from './i18n';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import mentor1 from '/mentor_1.png';
+import mentor2 from '/mentor_2.png';
 
 export function Mentors() {
   const { t } = useTranslation();
-  
+  const mentorImages = [mentor1, mentor2];
+
   return (
     <section id="mentors" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,17 +29,15 @@ export function Mentors() {
             >
               <div className="p-8">
                 <div className="flex items-center">
-                  <div className="h-20 w-20 rounded-full bg-gradient-to-br from-dark-pastel-green/80 to-dark-pastel-green flex items-center justify-center text-white text-2xl font-bold mr-6">
-                    {mentor.name.charAt(0)}
-                  </div>
+                  <img src={mentorImages[idx]} alt={mentor.name} className="h-20 w-20 rounded-full mr-6" />
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{mentor.name}</h3>
                     <p className="text-gray-600 mt-1">{mentor.role}</p>
                     <div className="mt-3 flex space-x-3">
-                      <a href="#" className="text-gray-500 hover:text-dark-pastel-green transition-colors">
+                      <a href={mentor.linkedin} className="text-gray-500 hover:text-dark-pastel-green transition-colors">
                         <FaLinkedin size={20} />
                       </a>
-                      <a href="#" className="text-gray-500 hover:text-dark-pastel-green transition-colors">
+                      <a href={mentor.github} className="text-gray-500 hover:text-dark-pastel-green transition-colors">
                         <FaGithub size={20} />
                       </a>
                     </div>
@@ -61,3 +62,23 @@ export function Mentors() {
     </section>
   );
 }
+
+// Update the translation file to include the LinkedIn and GitHub links for the mentors
+const mentorsList = [
+  {
+    name: 'Frederico Bezerra',
+    role: 'Software Engineer',
+    linkedin: 'https://linkedin.com/in/fredericobezerra',
+    github: 'https://github.com/freddneos',
+    achievements: ['Achievement 1', 'Achievement 2']
+  },
+  {
+    name: 'Yago',
+    role: 'Developer',
+    linkedin: 'https://www.linkedin.com/in/yago-valuche-95b7591ab/',
+    github: 'https://github.com/yagovaluchedevs',
+    achievements: ['Achievement 1', 'Achievement 2']
+  }
+];
+
+export default mentorsList;

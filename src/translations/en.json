@@ -154,20 +154,24 @@
     "subtitle": "Learn from experienced professionals working in the market",
     "list": [
       {
-        "name": "Fredd Bezerra",
-        "role": "CTO, full-stack developer and instructor with international experience",
+        "name": "Frederico Bezerra",
+        "role": "Software Engineer",
+        "linkedin": "https://linkedin.com/in/fredericobezerra",
+        "github": "https://github.com/freddneos",
         "achievements": [
-          "Over 10 years of development experience",
-          "JavaScript and web technologies specialist",
-          "Has trained over 500 students"
+          "Over 14 years of experience in Startups and Tech Companies",
+          "Fullstack Development and AI Specialist",
+          "Worked in 4 Continents"
         ]
       },
       {
-        "name": "Yago Valuche",
-        "role": "Full-stack developer and technology teaching specialist",
+        "name": "Yago",
+        "role": "Developer",
+        "linkedin": "https://www.linkedin.com/in/yago-valuche-95b7591ab/",
+        "github": "https://github.com/yagovaluchedevs",
         "achievements": [
           "Full-stack developer for 8 years",
-          "Expert in teaching and agile methodologies",
+          "Specialist in teaching and agile methodologies",
           "Author of several online programming courses"
         ]
       }
