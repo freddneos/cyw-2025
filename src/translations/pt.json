@@ -1,8 +1,29 @@
 {
-  "title": "🚀 CodeYourWay Ignite Express - Módulo 1",
+  "title": "🚀 CodeYourWay Ignite Express",
   "hero": {
     "title": "Acelere sua entrada no mundo da programação",
-    "subtitle": "Aprenda a programar em 4 semanas com aulas ao vivo e práticas intensas"
+    "subtitle": "Aprenda os fundamentos da programação web em 6 semanas com aulas ao vivo e práticas intensas",
+    "stats": {
+      "weeks": {
+        "value": "6",
+        "label": "Semanas"
+      },
+      "hours": {
+        "value": "34h",
+        "label": "De conteúdo"
+      },
+      "practice": {
+        "value": "100%",
+        "label": "Prática"
+      }
+    },
+    "code": {
+      "comments": {
+        "learn": "Learn while building projects",
+        "future": "Your future starts here"
+      },
+      "html": "<div class=\"coder\">You</div>"
+    }
   },
   "about": {
     "title": "📌 Sobre o Bootcamp",
@@ -11,7 +32,7 @@
   "schedule": {
     "title": "📅 Cronograma",
     "warmup": {
-      "title": "📌 Aquecimento (Abril 2025):",
+      "title": "📌 Fase de Aquecimento (2 semanas - Abril 2025):",
       "items": [
         "Aulas gravadas introdutórias",
         "Acesso à comunidade exclusiva",
@@ -19,18 +40,32 @@
       ]
     },
     "classes": {
-      "title": "📌 Início das Aulas ao Vivo (Maio 2025):",
+      "title": "📌 Aulas ao Vivo (4 semanas - Maio 2025):",
       "items": [
         "Aulas 2x por semana (3h cada)",
         "Projetos práticos em cada módulo",
         "Sessões de mentoria ao vivo",
         "Aulas extras de revisão"
       ]
+    },
+    "dateInfo": {
+      "start": {
+        "label": "Início",
+        "value": "Abril 2025"
+      },
+      "duration": {
+        "label": "Duração",
+        "value": "6 semanas"
+      },
+      "format": {
+        "label": "Formato",
+        "value": "Ao vivo"
+      }
     }
   },
   "structure": {
-    "title": "🏆 Estrutura do Módulo 1",
-    "name": "CodeYourWay Ignite Foundations",
+    "title": "🏆 Estrutura do Ignite Express",
+    "name": "CodeYourWay Ignite Express",
     "hours": {
       "title": "📌 Carga Horária Total: 34 horas",
       "items": [
@@ -41,8 +76,8 @@
     }
   },
   "objective": {
-    "title": "🎯 Objetivo do Módulo 1",
-    "description": "O objetivo deste módulo é ensinar as bases da programação web, com JavaScript desde o primeiro dia, além de HTML e CSS como suporte para desenvolver projetos completos."
+    "title": "🎯 Objetivo do Ignite Express",
+    "description": "O objetivo deste programa é ensinar as bases da programação web, com JavaScript desde o primeiro dia, além de HTML e CSS como suporte para desenvolver projetos completos."
   },
   "strategy": {
     "title": "🔥 Estratégia de Aprendizado",
@@ -54,8 +89,18 @@
     ]
   },
   "topics": {
-    "title": "🏗 Tópicos do Módulo 1",
+    "title": "🎓 Currículo",
+    "subtitle": "Nosso currículo foi cuidadosamente estruturado para maximizar seu aprendizado em 6 semanas, incluindo 2 semanas de aquecimento e 4 semanas de aulas ao vivo.",
     "weeks": [
+      {
+        "title": "Warm-up: Aquecimento e intro",
+        "items": [
+          "Aprendendo sobre Tecnologia",
+          "Programacao Web Backend e Frontend",
+          "Preparando Ambiente de Estudo",
+          "Encontros na comunidade"
+        ]
+      },
       {
         "title": "Semana 1: Fundamentos da Web e Introdução ao JavaScript",
         "items": [
@@ -64,7 +109,8 @@
           "📌 Configuração do ambiente (VS Code, Node.js, Git)",
           "📌 Criando um primeiro site estático e publicando no GitHub Pages",
           "📌 Introdução ao JavaScript: Variáveis, Tipos de Dados e Operadores"
-        ]
+        ],
+        "technologies": ["Comunidade", "Teoria", "WEB"]
       },
       {
         "title": "Semana 2: JavaScript Essencial e Manipulação do DOM",
@@ -74,7 +120,8 @@
           "📌 Funções e escopo",
           "📌 Manipulação de DOM: querySelector, eventos e interações",
           "📌 Criando um To-Do List interativo"
-        ]
+        ],
+        "technologies": ["JavaScript", "DOM", "To-Do App"]
       },
       {
         "title": "Semana 3: JavaScript Avançado e Armazenamento de Dados",
@@ -83,7 +130,8 @@
           "📌 Métodos map(), filter(), reduce()",
           "📌 JSON e LocalStorage",
           "📌 Criando um Gerenciador de Tarefas Persistente"
-        ]
+        ],
+        "technologies": ["JavaScript", "Arrays", "LocalStorage"]
       },
       {
         "title": "Semana 4: APIs, Git Avançado e Publicação de Projetos",
@@ -91,22 +139,31 @@
           "📌 Trabalhando com APIs públicas usando fetch()",
           "📌 Criando um App de Clima com API externa",
           "📌 Versionamento de código e branches no GitHub",
-          "📌 Criando um portfólio básico para publicar os projetos feitos no curso"
-        ]
+          "📌 Criando um portfólio básico para publicar os projetos feitos no curso",
+          "📌 Imersão em IA: Automatizando seu fluxo de trabalho e acelerando seu aprendizado"
+        ],
+        "technologies": ["APIs", "Fetch", "GitHub", "Portfolio"]
       }
-    ]
+    ],
+    "technologies": {
+      "week1": ["Networking", "IDE", "Web"],
+      "week2": ["HTML", "CSS", "Git"],
+      "week3": ["JavaScript", "DOM", "To-Do App"],
+      "week4": ["JavaScript", "Arrays", "LocalStorage"],
+      "week5": ["APIs", "Fetch", "AI", "Portfolio"]
+    }
   },
   "mentors": {
     "title": "🎙 Mentores",
     "subtitle": "Aprenda com profissionais experientes que atuam no mercado",
     "list": [
       {
-        "name": "Fredd Bezerra",
-        "role": "CTO, desenvolvedor full-stack e instrutor com experiência internacional",
+        "name": "Frederico Bezerra",
+        "role": "Fundador do CodeYourWay  e instrutor com experiência internacional",
         "achievements": [
-          "Mais de 10 anos de experiência em desenvolvimento",
-          "Especialista em JavaScript e tecnologias web",
-          "Já treinou mais de 500 estudantes"
+          "Mais de 14 anos de experiência em Startups e Empresas de Tecnologia",
+          "Especialista em Desenvolvimento Fullstack e Inteligência Artificial",
+          "Já Atuou em 4 Continentes"
         ]
       },
       {
@@ -118,16 +175,6 @@
           "Autor de diversos cursos online de programação"
         ]
       }
-    ]
-  },
-  "style": {
-    "title": "📌 Tom e Estilo do Texto",
-    "items": [
-      "✅ Direto ao ponto, claro e objetivo",
-      "✅ Foco em aprendizado acelerado e prática",
-      "✅ Sem falar de \"carreira\", mas sim de habilidades e entrar no mundo da tecnologia",
-      "✅ Ênfase em aulas ao vivo e prática intensa",
-      "✅ Motivacional, mostrando que qualquer um pode aprender programação rapidamente"
     ]
   },
   "cta": {
@@ -169,7 +216,8 @@
         "Comunidade exclusiva para networking",
         "Sessões de mentoria individual",
         "Certificado de conclusão",
-        "Suporte por 30 dias após o término do bootcamp"
+        "Suporte por 30 dias após o término do bootcamp",
+        "Imersão especial em IA para acelerar seu aprendizado em até 10x"
       ]
     },
     "pricing": {
@@ -192,5 +240,43 @@
     "title": "Entrar na lista de espera",
     "email": "Seu email",
     "button": "Enviar"
+  },
+  "footer": {
+    "quickLinks": {
+      "title": "Links Rápidos",
+      "items": {
+        "about": "Sobre o Bootcamp",
+        "schedule": "Cronograma",
+        "topics": "Tópicos",
+        "mentors": "Mentores",
+        "faq": "FAQ"
+      }
+    },
+    "contact": {
+      "title": "Contato",
+      "address": "Porto, Portugal",
+      "phone": "+351 913873938",
+      "whatsapp": "Whatsapp disponível",
+      "email": "hello@codeyourway.eu"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/codeyourway.eu/",
+      "linkedin": "https://www.linkedin.com/school/codeyourwaybootcamp",
+      "labels": {
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "copyright": "© 2025 CodeYourWay. Todos os direitos reservados."
+  },
+  "navbar": {
+    "logo": {
+      "first": "Code",
+      "second": "YourWay"
+    }
+  },
+  "meta": {
+    "title": "CodeYourWay Express | Bootcamp de Programação",
+    "description": "CodeYourWay Ignite Express - Aprenda os fundamentos da programação web em 4 semanas com aulas ao vivo e prática intensiva. Bootcamp com JavaScript, HTML, CSS e Inteligência Artificial."
   }
 }

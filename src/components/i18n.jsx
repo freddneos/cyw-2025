@@ -28,6 +28,12 @@ i18next
     }
   });
 
+// Update meta information based on current language
+const updateMetaContent = () => {
+  document.title = i18next.t('meta.title');
+  document.querySelector('meta[name="description"]').content = i18next.t('meta.description');
+};
+
 // Custom hook for translations
 export function useTranslation() {
   const [language, setLanguage] = useState(i18next.language);
@@ -35,9 +41,13 @@ export function useTranslation() {
   useEffect(() => {
     const handleLanguageChanged = () => {
       setLanguage(i18next.language);
+      updateMetaContent();
     };
 
     i18next.on('languageChanged', handleLanguageChanged);
+    // Update meta content on initial load
+    updateMetaContent();
+    
     return () => {
       i18next.off('languageChanged', handleLanguageChanged);
     };

@@ -1,8 +1,29 @@
 {
-  "title": "🚀 CodeYourWay Ignite Express - Module 1",
+  "title": "🚀 CodeYourWay Ignite Express",
   "hero": {
     "title": "Fast-track your way into programming",
-    "subtitle": "Learn to code in 4 weeks with live classes and intensive practice"
+    "subtitle": "Learn to code in 6 weeks with live classes and intensive practice",
+    "stats": {
+      "weeks": {
+        "value": "6",
+        "label": "Weeks"
+      },
+      "hours": {
+        "value": "34h",
+        "label": "Content"
+      },
+      "practice": {
+        "value": "100%",
+        "label": "Practice"
+      }
+    },
+    "code": {
+      "comments": {
+        "learn": "Learn while building projects",
+        "future": "Your future starts here"
+      },
+      "html": "<div class=\"coder\">You</div>"
+    }
   },
   "about": {
     "title": "📌 About the Bootcamp",
@@ -11,7 +32,7 @@
   "schedule": {
     "title": "📅 Schedule",
     "warmup": {
-      "title": "📌 Warm-up (April 2025):",
+      "title": "📌 Warm-up Phase (2 weeks - April 2025):",
       "items": [
         "Introductory recorded classes",
         "Access to exclusive community",
@@ -19,18 +40,32 @@
       ]
     },
     "classes": {
-      "title": "📌 Start of Live Classes (May 2025):",
+      "title": "📌 Live Classes (4 weeks - May 2025):",
       "items": [
         "Classes 2x per week (3h each)",
         "Practical projects in each module",
         "Live mentoring sessions",
         "Extra review classes"
       ]
+    },
+    "dateInfo": {
+      "start": {
+        "label": "Start",
+        "value": "April 2025"
+      },
+      "duration": {
+        "label": "Duration",
+        "value": "4 weeks"
+      },
+      "format": {
+        "label": "Format",
+        "value": "Live"
+      }
     }
   },
   "structure": {
-    "title": "🏆 Module 1 Structure",
-    "name": "CodeYourWay Ignite Foundations",
+    "title": "🏆 Ignite Express Structure",
+    "name": "CodeYourWay Ignite Express",
     "hours": {
       "title": "📌 Total Workload: 34 hours",
       "items": [
@@ -41,8 +76,8 @@
     }
   },
   "objective": {
-    "title": "🎯 Module 1 Objective",
-    "description": "The objective of this module is to teach the basics of web programming, with JavaScript from day one, as well as HTML and CSS as support to develop complete projects."
+    "title": "🎯 Ignite Express Objective",
+    "description": "The objective of this program is to teach the basics of web programming, with JavaScript from day one, as well as HTML and CSS as support to develop complete projects."
   },
   "strategy": {
     "title": "🔥 Learning Strategy",
@@ -54,8 +89,18 @@
     ]
   },
   "topics": {
-    "title": "🏗 Module 1 Topics",
+    "title": "🎓 Currículum",
+    "subtitle": "Our curriculum has been carefully structured to maximize your learning in 6 weeks, including 2 weeks of warm-up and 4 weeks of live classes.",
     "weeks": [
+      {
+        "title": "Warm up and intro",
+        "items": [
+          "Learning Technology Fundamentals",
+          "Preparing Study Environment",
+          "Day to day of a programmer",
+          "Meetings in the community"
+        ]
+      },
       {
         "title": "Week 1: Web Fundamentals and Introduction to JavaScript",
         "items": [
@@ -91,10 +136,18 @@
           "📌 Working with public APIs using fetch()",
           "📌 Creating a Weather App with external API",
           "📌 Code versioning and branches on GitHub",
-          "📌 Creating a basic portfolio to publish the projects made in the course"
+          "📌 Creating a basic portfolio to publish the projects made in the course",
+          "📌 AI Immersion: Automating your workflow and accelerating your learning"
         ]
       }
     ]
+  },
+  "technologies": {
+      "week1": ["Networking", "IDE", "Web"],
+      "week2": ["HTML", "CSS", "Git"],
+      "week3": ["JavaScript", "DOM", "To-Do App"],
+      "week4": ["JavaScript", "Arrays", "LocalStorage"],
+      "week5": ["APIs", "Fetch", "AI", "Portfolio"]
   },
   "mentors": {
     "title": "🎙 Mentors",
@@ -169,7 +222,8 @@
         "Exclusive networking community",
         "Individual mentoring sessions",
         "Completion certificate",
-        "30-day support after bootcamp completion"
+        "30-day support after bootcamp completion",
+        "Special AI immersion to accelerate your learning up to 10x"
       ]
     },
     "pricing": {
@@ -180,7 +234,7 @@
       "promotional": {
         "label": "Promotional price",
         "value": "€ 300,00",
-        "installments": "ou 3x de € 100,00 com Klarna"
+        "installments": "or 3x € 100,00 with Klarna"
       }
     },
     "vacancies": {
@@ -190,8 +244,47 @@
   },
   "waitlist": {
     "title": "Join the waiting list",
+    "message": "Be the first to know about new bootcamps in english and exclusive offers",
     "email": "Your email",
     "button": "Submit",
-    "message": "The bootcamp is not yet available in English but will be translated soon. Join our waiting list to be notified."
+    "success": "Thanks for joining our waitlist!"
+  },
+  "footer": {
+    "quickLinks": {
+      "title": "Quick Links",
+      "items": {
+        "about": "About the Bootcamp",
+        "schedule": "Schedule",
+        "topics": "Topics",
+        "mentors": "Mentors",
+        "faq": "FAQ"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Porto, Portugal",
+      "phone": "+351 913873938",
+      "whatsapp": "Whatsapp available",
+      "email": "contact@codeyourway.com.br"
+    },
+    "social": {
+      "instagram": "https://www.instagram.com/codeyourway.eu/",
+      "linkedin": "https://www.linkedin.com/school/codeyourwaybootcamp",
+      "labels": {
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn"
+      }
+    },
+    "copyright": "© 2025 CodeYourWay. All rights reserved."
+  },
+  "navbar": {
+    "logo": {
+      "first": "Code",
+      "second": "YourWay"
+    }
+  },
+  "meta": {
+    "title": "CodeYourWay Express | Programming Bootcamp",
+    "description": "CodeYourWay Ignite Express - Learn web programming fundamentals in 4 weeks with live classes and intensive practice. Bootcamp with JavaScript, HTML, CSS and Artificial Intelligence."
   }
 }

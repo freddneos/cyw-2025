@@ -56,7 +56,7 @@ export function Hero() {
             {/* Stats */}
             <div className="mt-12 flex flex-wrap gap-x-12 gap-y-6 justify-center md:justify-start">
               <div className="text-center md:text-left">
-                <p className="text-4xl font-bold text-gray-900">4</p>
+                <p className="text-4xl font-bold text-gray-900">6</p>
                 <p className="text-sm text-gray-600 mt-1">Semanas</p>
               </div>
               <div className="text-center md:text-left">
@@ -90,12 +90,12 @@ export function Hero() {
                   <code className="language-javascript text-gray-800">
                     <span className="text-purple-600">function</span> <span className="text-blue-600">buildYourFuture</span>() {'{'}<br/>
                     {'  '}<span className="text-purple-600">const</span> <span className="text-blue-600">skills</span> = [];<br/>
-                    {'  '}<span className="text-purple-600">const</span> <span className="text-blue-600">weeks</span> = 4;<br/>
+                    {'  '}<span className="text-purple-600">const</span> <span className="text-blue-600">weeks</span> = 6;<br/>
                     {'  '}<span className="text-purple-600">let</span> <span className="text-blue-600">knowledge</span> = 0;<br/>
                     <br/>
                     {'  '}<span className="text-green-600">// Learn while building projects</span><br/>
                     {'  '}<span className="text-purple-600">for</span>(<span className="text-purple-600">let</span> i = 0; i {'<'} weeks; i++) {'{'}<br/>
-                    {'    '}skills.<span className="text-blue-600">push</span>(<span className="text-orange-600">'JavaScript'</span>, <span className="text-orange-600">'HTML'</span>, <span className="text-orange-600">'CSS'</span>);<br/>
+                    {'    '}skills.<span className="text-blue-600">push</span>(<span className="text-orange-600">'JavaScript'</span>, <span className="text-orange-600">'HTML'</span>, <span className="text-orange-600">'CSS'</span>, <span className="text-orange-600">'GIT'</span>, <span className="text-orange-600">'AI'</span>);<br/>
                     {'    '}knowledge += buildProject(i);<br/>
                     {'  }'}<br/>
                     <br/>

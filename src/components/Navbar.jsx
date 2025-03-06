@@ -42,8 +42,8 @@ export function Navbar() {
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <a href="#" className="text-xl font-bold text-gray-900 flex items-center">
-            <span className="text-dark-pastel-green">Code</span>
-            <span>YourWay</span>
+            <span className="text-dark-pastel-green">{t('navbar.logo.first')}</span>
+            <span>{t('navbar.logo.second')}</span>
           </a>
           
           {/* Desktop navigation */}

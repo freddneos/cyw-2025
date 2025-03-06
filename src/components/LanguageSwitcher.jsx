@@ -16,12 +16,9 @@ export function LanguageSwitcher() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the email to your backend
-    console.log('Email for waitlist:', email);
     setShowWaitlist(false);
     setEmail('');
-    // Show a success message or feedback
-    alert('Thanks for joining our waitlist!');
+    alert(i18n.t('waitlist.success'));
   };
 
   const currentLanguage = i18n.language || 'pt';

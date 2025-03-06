@@ -64,7 +64,7 @@ export function Schedule() {
           {/* Right column: Module structure */}
           <div className="relative">
             <div 
-              className="bg-white rounded-lg shadow-md p-8 border-t-4 border-dark-pastel-green"
+              className="bg-white rounded-lg h-full shadow-md p-8 border-t-4 border-dark-pastel-green"
               data-aos="fade-up"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('structure.name')}</h3>
@@ -83,18 +83,18 @@ export function Schedule() {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
-                    <span className="block text-sm text-gray-500">Início</span>
-                    <span className="block text-lg font-medium text-gray-900">Abril 2025</span>
+                    <span className="block text-sm text-gray-500">{t('schedule.dateInfo.start.label')}</span>
+                    <span className="block text-lg font-medium text-gray-900">{t('schedule.dateInfo.start.value')}</span>
                   </div>
                   <div className="w-16 h-0.5 bg-gray-200"></div>
                   <div>
-                    <span className="block text-sm text-gray-500">Duração</span>
-                    <span className="block text-lg font-medium text-gray-900">4 semanas</span>
+                    <span className="block text-sm text-gray-500">{t('schedule.dateInfo.duration.label')}</span>
+                    <span className="block text-lg font-medium text-gray-900">{t('schedule.dateInfo.duration.value')}</span>
                   </div>
                   <div className="w-16 h-0.5 bg-gray-200"></div>
                   <div>
-                    <span className="block text-sm text-gray-500">Formato</span>
-                    <span className="block text-lg font-medium text-gray-900">Ao vivo</span>
+                    <span className="block text-sm text-gray-500">{t('schedule.dateInfo.format.label')}</span>
+                    <span className="block text-lg font-medium text-gray-900">{t('schedule.dateInfo.format.value')}</span>
                   </div>
                 </div>
               </div>
