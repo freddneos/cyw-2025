@@ -35,6 +35,7 @@ export function useFormSubmission(shouldRedirect = true) {
     phone,
     setPhone,
     isSubmitted,
+    setIsSubmitted,
     handleSubmit,
   };
 }

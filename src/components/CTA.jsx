@@ -1,10 +1,14 @@
 import { useFormSubmission } from '../hooks/useFormSubmission';
 import { useTranslation } from './i18n';
 import { motion } from 'framer-motion';
-import { FaRocket, FaCheck } from 'react-icons/fa';
+import { FaRocket, FaCheck, FaWhatsapp, FaTimes } from 'react-icons/fa';
+import { useState, useEffect } from 'preact/hooks';
+import { useQueryParams } from '../hooks/useQueryParams';
 
 export function CTA() {
   const { t } = useTranslation();
+  const queryParams = useQueryParams();
+  const [showWhatsappPopup, setShowWhatsappPopup] = useState(false);
   const {
     email,
     setEmail,
@@ -13,8 +17,26 @@ export function CTA() {
     phone,
     setPhone,
     isSubmitted,
+    setIsSubmitted,
     handleSubmit,
   } = useFormSubmission();
+  
+  // Check for payment success redirect (pd=true)
+  useEffect(() => {
+    if (queryParams.pd === 'true') {
+      setIsSubmitted(true);
+      setShowWhatsappPopup(true);
+    }
+  }, [queryParams, setIsSubmitted]);
+
+  const handleWhatsappClose = () => {
+    setShowWhatsappPopup(false);
+  };
+  
+  const joinWhatsappGroup = () => {
+    window.open('https://chat.whatsapp.com/EDvtfUT9LbQAEGf1LmtIpG', '_blank');
+    setShowWhatsappPopup(false);
+  };
   
   return (
     <section id="inscricao" className="relative py-16 md:py-24 bg-gradient-to-b from-dark-pastel-green/5 to-dark-pastel-green/20 overflow-hidden">
@@ -24,6 +46,56 @@ export function CTA() {
         <div className="absolute top-1/2 -left-24 w-48 h-48 bg-dark-pastel-green/10 rounded-full"></div>
         <div className="absolute -bottom-16 right-1/4 w-36 h-36 bg-dark-pastel-green/10 rounded-full"></div>
       </div>
+      
+      {/* WhatsApp Popup */}
+      {showWhatsappPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <motion.div 
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 overflow-hidden"
+          >
+            <div className="relative p-6">
+              <button 
+                onClick={handleWhatsappClose}
+                className="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
+              >
+                <FaTimes className="w-5 h-5" />
+              </button>
+              
+              <div className="text-center mb-4">
+                <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+                  <FaWhatsapp className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">
+                  {t('cta.whatsapp.title') || 'Join our Students Group!'}
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  {t('cta.whatsapp.message') || 'Connect with other students and get exclusive updates and support in our WhatsApp group.'}
+                </p>
+              </div>
+              
+              <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                <button
+                  type="button"
+                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:col-start-2"
+                  onClick={joinWhatsappGroup}
+                >
+                  <FaWhatsapp className="mr-2 h-5 w-5" />
+                  {t('cta.whatsapp.joinButton') || 'Join Group'}
+                </button>
+                <button
+                  type="button"
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:col-start-1"
+                  onClick={handleWhatsappClose}
+                >
+                  {t('cta.whatsapp.laterButton') || 'Maybe Later'}
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
@@ -116,12 +188,23 @@ export function CTA() {
                     </div>
                     <h4 className="text-lg font-medium text-gray-900">{t('cta.success.title')}</h4>
                     <p className="mt-2 text-gray-600">{t('cta.success.message')}</p>
-                    <button
-                      onClick={() => setIsSubmitted(false)}
-                      className="mt-4 text-dark-pastel-green hover:underline"
-                    >
-                      {t('cta.success.backButton')}
-                    </button>
+                    <div className="mt-6 flex flex-col sm:flex-row sm:justify-center gap-3">
+                      <button
+                        onClick={() => setIsSubmitted(false)}
+                        className="text-dark-pastel-green hover:underline"
+                      >
+                        {t('cta.success.backButton')}
+                      </button>
+                      {!showWhatsappPopup && (
+                        <button
+                          onClick={() => setShowWhatsappPopup(true)}
+                          className="mt-2 sm:mt-0 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700"
+                        >
+                          <FaWhatsapp className="-ml-1 mr-2 h-5 w-5" />
+                          {t('cta.whatsapp.joinButton') || 'Join WhatsApp Group'}
+                        </button>
+                      )}
+                    </div>
                   </motion.div>
                 )}
               </div>

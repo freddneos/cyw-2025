@@ -210,6 +210,12 @@
       "message": "Entraremos em contato em breve com mais informações sobre o bootcamp.",
       "backButton": "Voltar para o formulário"
     },
+    "whatsapp": {
+      "title": "Junte-se ao Grupo de Alunos!",
+      "message": "Conecte-se com outros estudantes e receba atualizações exclusivas e suporte em nosso grupo do WhatsApp.",
+      "joinButton": "Entrar no Grupo",
+      "laterButton": "Talvez Depois"
+    },
     "benefits": {
       "title": "O que está incluído:",
       "items": [
