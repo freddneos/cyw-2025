@@ -2,10 +2,19 @@ import { useTranslation } from './i18n';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import mentor1 from '/mentor_1.png';
 import mentor2 from '/mentor_2.png';
+import { Crisp } from 'crisp-sdk-web';
 
 export function Mentors() {
   const { t } = useTranslation();
   const mentorImages = [mentor1, mentor2];
+
+  const handleMentorClick = (e, mentor, linkType) => {
+    e.preventDefault();
+    const clickedLink = linkType === 'linkedin' ? mentor.linkedin : mentor.github;
+    Crisp.session.setSegments(["mentor_checker"]);
+    Crisp.session.pushEvent("mentor_checker", { link: clickedLink, mentor: mentor.name });
+    window.open(clickedLink, '_blank');
+  };
 
   return (
     <section id="mentors" className="py-16 md:py-24 bg-gray-50">
@@ -34,10 +43,18 @@ export function Mentors() {
                     <h3 className="text-xl font-bold text-gray-900">{mentor.name}</h3>
                     <p className="text-gray-600 mt-1">{mentor.role}</p>
                     <div className="mt-3 flex space-x-3">
-                      <a href={mentor.linkedin} className="text-gray-500 hover:text-dark-pastel-green transition-colors">
+                      <a 
+                        href={mentor.linkedin} 
+                        className="text-gray-500 hover:text-dark-pastel-green transition-colors"
+                        onClick={(e) => handleMentorClick(e, mentor, 'linkedin')}
+                      >
                         <FaLinkedin size={20} />
                       </a>
-                      <a href={mentor.github} className="text-gray-500 hover:text-dark-pastel-green transition-colors">
+                      <a 
+                        href={mentor.github} 
+                        className="text-gray-500 hover:text-dark-pastel-green transition-colors"
+                        onClick={(e) => handleMentorClick(e, mentor, 'github')}
+                      >
                         <FaGithub size={20} />
                       </a>
                     </div>
