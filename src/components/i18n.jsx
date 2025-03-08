@@ -13,6 +13,7 @@ export const I18nContext = createContext();
 i18next
   .use(LanguageDetector)
   .init({
+    lng: 'pt', // always initialize with Portuguese
     resources: {
       pt: {
         translation: ptTranslations
