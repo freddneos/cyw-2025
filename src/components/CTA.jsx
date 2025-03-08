@@ -26,6 +26,7 @@ export function CTA() {
   // Check for payment success redirect (pd=true)
   useEffect(() => {
     if (queryParams.pd === 'true') {
+      Crisp.session.setSegments(["course_purchased"]);
       Crisp.session.pushEvent("purchased_course" , {
         course:'ignite_express'
       });
@@ -36,6 +37,7 @@ export function CTA() {
 
   const submitForm = (event) => {
     event.preventDefault();
+    Crisp.session.setSegments(["submitted_form"]);
     Crisp.session.pushEvent("submitted_form" , {
       form:'ignite_express'
     });
@@ -55,6 +57,7 @@ export function CTA() {
       group:'ignite_express',
       link:'https://chat.whatsapp.com/EDvtfUT9LbQAEGf1LmtIpG'
     });
+    Crisp.session.setSegments(["whatsapp_group"]);
     window.open('https://chat.whatsapp.com/EDvtfUT9LbQAEGf1LmtIpG', '_blank');
     setShowWhatsappPopup(false);
   };

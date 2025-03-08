@@ -1,10 +1,17 @@
 import { useState } from 'preact/hooks';
 import { useTranslation } from './i18n';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { Crisp } from "crisp-sdk-web";
+
 
 export function Topics() {
   const { t } = useTranslation();
   const [activeWeek, setActiveWeek] = useState(0);
+
+  const handleClickOnWeek = (weekIndex) => {
+    Crisp.session.setSegments(["detail_checker"]);
+    Crisp.session.pushEvent("week_check" ,{ week: weekIndex});
+  }
 
   const weeks = [
     ...t('topics.weeks', { returnObjects: true })
@@ -47,7 +54,14 @@ export function Topics() {
               >
                 <button 
                   className="w-full px-6 py-4 flex items-center justify-between text-left focus:outline-none"
-                  onClick={() => setActiveWeek(idx === activeWeek ? idx : idx)}
+                  onClick={() => { 
+                    if (activeWeek === idx) {
+                      setActiveWeek(-1);
+                    } else {
+                      setActiveWeek(idx);
+                      handleClickOnWeek(idx);
+                    }
+                  }}
                 >
                   <div className="flex items-center">
                     <div className="hidden md:flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-dark-pastel-green/10 text-dark-pastel-green mr-4">
