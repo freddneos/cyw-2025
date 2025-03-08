@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { FaRocket, FaCheck, FaWhatsapp, FaTimes } from 'react-icons/fa';
 import { useState, useEffect } from 'preact/hooks';
 import { useQueryParams } from '../hooks/useQueryParams';
+import { Crisp } from "crisp-sdk-web";
+
 
 export function CTA() {
   const { t } = useTranslation();
@@ -24,16 +26,35 @@ export function CTA() {
   // Check for payment success redirect (pd=true)
   useEffect(() => {
     if (queryParams.pd === 'true') {
+      Crisp.session.pushEvent("purchased_course" , {
+        course:'ignite_express'
+      });
       setIsSubmitted(true);
       setShowWhatsappPopup(true);
     }
   }, [queryParams, setIsSubmitted]);
+
+  const submitForm = (event) => {
+    event.preventDefault();
+    Crisp.session.pushEvent("submitted_form" , {
+      form:'ignite_express'
+    });
+    Crisp.user.setEmail(email);
+    Crisp.user.setNickname(name);
+    Crisp.user.setPhone(phone);
+    handleSubmit(event);
+  }
+
 
   const handleWhatsappClose = () => {
     setShowWhatsappPopup(false);
   };
   
   const joinWhatsappGroup = () => {
+    Crisp.session.pushEvent("joined_whatsapp_group" , {
+      group:'ignite_express',
+      link:'https://chat.whatsapp.com/EDvtfUT9LbQAEGf1LmtIpG'
+    });
     window.open('https://chat.whatsapp.com/EDvtfUT9LbQAEGf1LmtIpG', '_blank');
     setShowWhatsappPopup(false);
   };
@@ -122,7 +143,7 @@ export function CTA() {
                 <p className="mt-3 text-gray-600">{t('cta.form.subtitle')}</p>
                 
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                  <form onSubmit={event => submitForm(event)} className="mt-8 space-y-5">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                         {t('cta.form.name.label')}
